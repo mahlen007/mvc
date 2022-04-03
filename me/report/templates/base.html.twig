@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="siteheader">
+            Site header with some site title
+        </div>
+        <div class="navbar">
+
+                    <a href="{{ url("home") }}">Home</a>
+                    <a href="{{ path("about") }}">About</a>
+                    <a href="{{ path("report") }}">Report</a>
+                    <a href="{{ path("debug") }}">Debug</a>
+        </div>
+        {% block content %}
+            Default content!!!
+        {% endblock %}
+        <div class="sitefooter">
+            Site footer with details
+        </div>
+    </body>
+</html>
